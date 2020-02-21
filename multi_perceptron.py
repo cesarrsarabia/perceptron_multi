@@ -33,7 +33,7 @@ def grafica_lineas(this_w,last_plot,is_last_plot):
         for c,item in enumerate(this_w):
             ax.plot([-2,3],[(-item[0]/item[1]) *
             (-2)-(b[c]/item[1]), (-item[0]/item[1])*(3)-(b[c]/item[1])],clases[c])
-            plt.pause(0.000000000000000000000000000000000001)
+            plt.pause(0.0000000000000000000000000000000000000000000000000000000001)
             index_plot += 1
         for i in range(index_plot,last_plot,-1):
             ax.lines.pop(i)
@@ -108,27 +108,7 @@ for i in range(num_col_salidas):
 fig, ax = plt.subplots()
 
 lst_i_plot = grafica_puntos()
-'''
-fig, ax = plt.subplots()
 
-xlim([-2,3])
-ylim([-2,3])
-
-x1 = np.array([[0,1,0,1],[0,0,1,1]])
-ax.plot(x1[0,0],x1[1,0], '*b')
-ax.plot(x1[0,1],x1[1,1], '*g')
-ax.plot(x1[0,2],x1[1,2], 'pm')
-ax.plot(x1[0,3],x1[1,3], 'or')
-'''
-
-#grafica primera linea
-#ax.plot([-2,3],[(-w[0][0]/w[0][1])*(-2)-(b/w[0][1]), (-w[0][0]/w[0][1])*(3)-(b/w[0][1])],'--g')
-#grafica segunda linea
-#ax.plot([-2,3],[(-w[1][0]/w[1][1])*(-2)-(b/w[1][1]), (-w[1][0]/w[1][1])*(3)-(b/w[1][1])],'--m')
-
-
-#print(w[0][0])
-#print(w[0][1])
 for i in range(epoch):
     for count,fila_training_item in enumerate(training_set):
         for x,y in fila_training_item:
